@@ -1,0 +1,7 @@
+# BIMI - Logiciel de gestion restaurant
+# https://bimi.quxly.fr
+
+User-agent: *
+Allow: /
+
+Sitemap: https://bimi.quxly.fr/sitemap.xml
