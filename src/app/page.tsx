@@ -19,240 +19,31 @@ import {
   Menu,
   X,
   ShoppingBag,
-  UserCheck,
-  ClipboardList,
   Zap,
   Shield,
   HeartHandshake,
+  Smartphone,
+  FileText,
+  Timer,
+  AlertTriangle,
+  TrendingUp,
+  Printer,
+  Mail,
+  MapPin,
+  Utensils,
+  CalendarClock,
+  UserCheck,
+  ClipboardCheck,
+  Droplets,
+  Package,
+  RotateCcw,
+  PieChart,
+  Users2,
+  Wallet,
+  Send,
+  Lock,
+  Wifi,
 } from "lucide-react";
-
-const features = [
-  {
-    id: "site-client",
-    title: "Site Client Complet",
-    subtitle: "Votre vitrine en ligne",
-    description: "Un site web moderne aux couleurs de votre restaurant. Vos clients consultent le menu, passent commande et réservent une table — 24h/24.",
-    points: [
-      "Menu interactif avec photos et descriptions",
-      "Commande en ligne avec paiement sécurisé",
-      "Réservation de table en temps réel",
-      "Suivi de commande pour le client",
-      "Responsive mobile-first",
-      "Votre propre nom de domaine",
-    ],
-    icon: Globe,
-    color: "amber",
-    screenshot: null,
-  },
-  {
-    id: "commandes",
-    title: "Gestion des Commandes",
-    subtitle: "Temps réel avec Socket.IO",
-    description: "Recevez les commandes instantanément. Notification sonore, mise à jour automatique du statut, et historique complet.",
-    points: [
-      "Notification instantanée nouvelle commande",
-      "Changement de statut en un clic",
-      "Vue kanban ou liste",
-      "Historique et recherche",
-      "Impression ticket automatique",
-    ],
-    icon: ShoppingBag,
-    color: "green",
-    screenshot: "/screenshots/01-sidebar.png",
-  },
-  {
-    id: "produits",
-    title: "Gestion des Produits",
-    subtitle: "Menu digital complet",
-    description: "Gérez votre carte en temps réel. Ajoutez, modifiez, activez ou désactivez des produits instantanément.",
-    points: [
-      "Catégories personnalisables",
-      "Photos, descriptions, allergènes",
-      "Gestion des prix et promotions",
-      "Rupture de stock en un clic",
-      "Produits populaires mis en avant",
-    ],
-    icon: ChefHat,
-    color: "purple",
-    screenshot: "/screenshots/09-products.png",
-  },
-  {
-    id: "reservations",
-    title: "Réservations & Plan de Salle",
-    subtitle: "Visualisation interactive",
-    description: "Plan de salle visuel avec gestion des réservations. Voyez en un coup d'œil la disponibilité de vos tables.",
-    points: [
-      "Plan de salle interactif",
-      "Réservations en ligne 24/7",
-      "Confirmation automatique par email",
-      "Gestion des créneaux horaires",
-      "Historique client",
-    ],
-    icon: CalendarDays,
-    color: "blue",
-    screenshot: "/screenshots/02-reservations.png",
-  },
-  {
-    id: "planning",
-    title: "Planning Employés",
-    subtitle: "Organisation simplifiée",
-    description: "Créez les plannings de votre équipe facilement. Vue semaine, assignation par poste, gestion des congés.",
-    points: [
-      "Vue calendrier semaine/mois",
-      "Assignation par poste",
-      "Gestion des congés et absences",
-      "Notification aux employés",
-      "Export PDF",
-    ],
-    icon: ClipboardList,
-    color: "indigo",
-    screenshot: "/screenshots/03-employee-stats.png",
-  },
-  {
-    id: "pointage",
-    title: "Pointage & Suivi",
-    subtitle: "Précision au temps réel",
-    description: "Système de pointage digital. Vos employés pointent leur arrivée, pause et départ. Suivi précis des heures.",
-    points: [
-      "Pointage arrivée/pause/départ",
-      "Géolocalisation optionnelle",
-      "Calcul automatique des heures",
-      "Alertes retard",
-      "Export pour la paie",
-    ],
-    icon: Clock,
-    color: "orange",
-    screenshot: "/screenshots/04-clock-in.png",
-  },
-  {
-    id: "rh",
-    title: "Gestion RH",
-    subtitle: "Chaque employé en détail",
-    description: "Fiche complète de chaque employé. Comparaison planifié vs réalisé, performance, documents, historique.",
-    points: [
-      "Fiche employé complète",
-      "Comparaison planifié / pointé",
-      "Score de ponctualité",
-      "Gestion des documents",
-      "Historique des absences",
-    ],
-    icon: Users,
-    color: "pink",
-    screenshot: "/screenshots/10-team-performance.png",
-  },
-  {
-    id: "clients",
-    title: "Base Clients & Fidélité",
-    subtitle: "Connaissez vos clients",
-    description: "Base de données clients avec historique de commandes, programme de fidélité et analytics.",
-    points: [
-      "Historique de commandes",
-      "Programme de points fidélité",
-      "Segmentation clients",
-      "Panier moyen par client",
-      "Clients VIP identifiés",
-    ],
-    icon: HeartHandshake,
-    color: "red",
-    screenshot: "/screenshots/06-clients.png",
-  },
-  {
-    id: "broadcast",
-    title: "Notifications Broadcast",
-    subtitle: "Email & Push",
-    description: "Communiquez avec tous vos clients en un clic. Promotions, nouveautés, événements — touchez votre audience.",
-    points: [
-      "Email marketing intégré",
-      "Notifications push mobile",
-      "Templates personnalisables",
-      "Ciblage par segment",
-      "Statistiques d'ouverture",
-    ],
-    icon: Bell,
-    color: "cyan",
-    screenshot: "/screenshots/08-notifications.png",
-  },
-  {
-    id: "analytics",
-    title: "Analytics & Tableau de Bord",
-    subtitle: "Pilotez votre activité",
-    description: "Dashboard complet avec chiffre d'affaires, commandes par heure, produits les plus vendus, et bien plus.",
-    points: [
-      "CA journalier/mensuel/annuel",
-      "Commandes par créneau horaire",
-      "Top produits vendus",
-      "Taux de fidélisation",
-      "Comparaison période",
-    ],
-    icon: BarChart3,
-    color: "emerald",
-    screenshot: "/screenshots/13-analytics-full.png",
-  },
-  {
-    id: "haccp",
-    title: "Conformité HACCP",
-    subtitle: "Relevés automatisés",
-    description: "Relevés de température digitaux. Fini les papiers, tout est enregistré et exportable pour les contrôles.",
-    points: [
-      "Relevés température frigo/congélateur",
-      "Alertes si hors normes",
-      "Historique complet",
-      "Export PDF pour contrôles",
-      "Rappels automatiques",
-    ],
-    icon: Thermometer,
-    color: "teal",
-    screenshot: "/screenshots/05-temperature.png",
-  },
-  {
-    id: "livraisons",
-    title: "Contrôle Livraisons",
-    subtitle: "Suivi fournisseurs",
-    description: "Contrôlez vos réceptions de marchandises. Conformité, température, traçabilité — tout est documenté.",
-    points: [
-      "Réception marchandises",
-      "Contrôle température",
-      "Photos de conformité",
-      "Historique par fournisseur",
-      "Alertes non-conformité",
-    ],
-    icon: Truck,
-    color: "slate",
-    screenshot: "/screenshots/11-delivery-control.png",
-  },
-  {
-    id: "promos",
-    title: "Codes Promo",
-    subtitle: "Boostez vos ventes",
-    description: "Créez des codes de réduction facilement. Pourcentage, montant fixe, livraison gratuite — vous décidez.",
-    points: [
-      "Codes pourcentage ou montant",
-      "Durée de validité",
-      "Limite d'utilisation",
-      "Statistiques d'usage",
-      "Codes uniques ou publics",
-    ],
-    icon: BadgePercent,
-    color: "violet",
-    screenshot: "/screenshots/12-promo-codes.png",
-  },
-];
-
-const colorClasses: Record<string, { bg: string; border: string; text: string; gradient: string }> = {
-  amber: { bg: "bg-amber-500/10", border: "border-amber-500/30", text: "text-amber-400", gradient: "from-amber-500/20" },
-  green: { bg: "bg-green-500/10", border: "border-green-500/30", text: "text-green-400", gradient: "from-green-500/20" },
-  purple: { bg: "bg-purple-500/10", border: "border-purple-500/30", text: "text-purple-400", gradient: "from-purple-500/20" },
-  blue: { bg: "bg-blue-500/10", border: "border-blue-500/30", text: "text-blue-400", gradient: "from-blue-500/20" },
-  indigo: { bg: "bg-indigo-500/10", border: "border-indigo-500/30", text: "text-indigo-400", gradient: "from-indigo-500/20" },
-  orange: { bg: "bg-orange-500/10", border: "border-orange-500/30", text: "text-orange-400", gradient: "from-orange-500/20" },
-  pink: { bg: "bg-pink-500/10", border: "border-pink-500/30", text: "text-pink-400", gradient: "from-pink-500/20" },
-  red: { bg: "bg-red-500/10", border: "border-red-500/30", text: "text-red-400", gradient: "from-red-500/20" },
-  cyan: { bg: "bg-cyan-500/10", border: "border-cyan-500/30", text: "text-cyan-400", gradient: "from-cyan-500/20" },
-  emerald: { bg: "bg-emerald-500/10", border: "border-emerald-500/30", text: "text-emerald-400", gradient: "from-emerald-500/20" },
-  teal: { bg: "bg-teal-500/10", border: "border-teal-500/30", text: "text-teal-400", gradient: "from-teal-500/20" },
-  slate: { bg: "bg-slate-500/10", border: "border-slate-500/30", text: "text-slate-400", gradient: "from-slate-500/20" },
-  violet: { bg: "bg-violet-500/10", border: "border-violet-500/30", text: "text-violet-400", gradient: "from-violet-500/20" },
-};
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -262,7 +53,7 @@ export default function Home() {
     offset: ["start start", "end start"],
   });
   const heroOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 0.9]);
+  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 0.95]);
 
   return (
     <div className="bg-[#0a0a0a] text-white min-h-screen overflow-x-hidden">
@@ -276,9 +67,10 @@ export default function Home() {
             <span className="font-bold text-2xl tracking-tight">BIMI</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#fonctionnalites" className="text-sm text-white/60 hover:text-white transition">Fonctionnalités</a>
-            <a href="#screenshots" className="text-sm text-white/60 hover:text-white transition">Aperçu</a>
-            <a href="#tarifs" className="text-sm text-white/60 hover:text-white transition">Tarifs</a>
+            <a href="#commandes" className="text-sm text-white/60 hover:text-white transition">Commandes</a>
+            <a href="#planning" className="text-sm text-white/60 hover:text-white transition">Planning</a>
+            <a href="#haccp" className="text-sm text-white/60 hover:text-white transition">HACCP</a>
+            <a href="#analytics" className="text-sm text-white/60 hover:text-white transition">Analytics</a>
             <a href="#contact" className="px-5 py-2.5 bg-gradient-to-r from-amber-500 to-orange-600 text-black rounded-full text-sm font-semibold hover:opacity-90 transition">
               Demander une démo
             </a>
@@ -293,9 +85,10 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden bg-[#0a0a0a] border-t border-white/5 px-6 py-4 flex flex-col gap-4"
           >
-            <a href="#fonctionnalites" className="text-white/60 hover:text-white">Fonctionnalités</a>
-            <a href="#screenshots" className="text-white/60 hover:text-white">Aperçu</a>
-            <a href="#tarifs" className="text-white/60 hover:text-white">Tarifs</a>
+            <a href="#commandes" className="text-white/60 hover:text-white">Commandes</a>
+            <a href="#planning" className="text-white/60 hover:text-white">Planning</a>
+            <a href="#haccp" className="text-white/60 hover:text-white">HACCP</a>
+            <a href="#analytics" className="text-white/60 hover:text-white">Analytics</a>
             <a href="#contact" className="px-5 py-2.5 bg-gradient-to-r from-amber-500 to-orange-600 text-black rounded-full text-sm font-semibold text-center">
               Demander une démo
             </a>
@@ -317,174 +110,627 @@ export default function Home() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-5xl relative z-10"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-500/10 to-orange-500/10 rounded-full border border-amber-500/20 mb-8">
-            <Zap className="w-4 h-4 text-amber-400" />
-            <span className="text-sm text-amber-200">Solution complète pour restaurants</span>
-          </div>
-
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
             <span className="bg-gradient-to-r from-amber-300 via-orange-400 to-red-500 bg-clip-text text-transparent">
               BIMI
             </span>
           </h1>
 
-          <p className="text-2xl md:text-3xl text-white/80 font-medium mb-4">
-            La plateforme tout-en-un pour gérer votre restaurant
-          </p>
-
-          <p className="text-lg md:text-xl text-white/50 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Site client • Commandes en ligne • Dashboard admin • Planning • Pointage • RH • HACCP • Analytics
+          <p className="text-2xl md:text-4xl text-white font-medium mb-4">
+            Arrêtez de gérer votre restaurant.
             <br />
-            <span className="text-white/30">Tout ce dont vous avez besoin, dans une seule solution.</span>
+            <span className="text-white/50">Pilotez-le.</span>
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <p className="text-lg text-white/40 max-w-2xl mx-auto mb-12">
+            33 modules. Un seul système. Zéro papier.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <a
               href="#contact"
               className="group flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-black rounded-full font-semibold text-lg hover:opacity-90 transition shadow-lg shadow-amber-500/25"
             >
-              Demander une démo gratuite
+              Voir la démo
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a
-              href="https://bimisushi31.com"
-              target="_blank"
-              className="flex items-center gap-2 px-8 py-4 border border-white/20 rounded-full font-medium text-lg hover:bg-white/5 transition"
-            >
-              <Globe className="w-5 h-5" />
-              Exemple en production
             </a>
           </div>
 
-          <p className="text-white/40 text-sm">
-            Déjà utilisé par <span className="text-amber-400 font-medium">BIMI SUSHI</span> à Toulouse — 51k€ de CA, 1600+ commandes
-          </p>
+          {/* Quick stats */}
+          <div className="flex flex-wrap justify-center gap-8 text-sm text-white/40">
+            <div className="flex items-center gap-2">
+              <Wifi className="w-4 h-4 text-green-400" />
+              <span>Temps réel Socket.IO</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Shield className="w-4 h-4 text-blue-400" />
+              <span>HACCP conforme</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Printer className="w-4 h-4 text-purple-400" />
+              <span>Impression intégrée</span>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mt-16 w-full max-w-6xl"
+        >
+          <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-amber-500/10">
+            <Image
+              src="/screenshots/13-analytics-full.png"
+              alt="Dashboard BIMI"
+              width={1920}
+              height={1080}
+              className="w-full"
+              priority
+            />
+          </div>
         </motion.div>
       </motion.section>
 
-      {/* Features Overview */}
-      <section className="py-20 px-6 border-y border-white/5 bg-gradient-to-b from-white/[0.02] to-transparent">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
-            {[
-              { icon: Globe, label: "Site Client", color: "amber" },
-              { icon: ShoppingBag, label: "Commandes", color: "green" },
-              { icon: CalendarDays, label: "Réservations", color: "blue" },
-              { icon: Clock, label: "Pointage", color: "orange" },
-              { icon: Users, label: "RH & Planning", color: "pink" },
-              { icon: BarChart3, label: "Analytics", color: "emerald" },
-              { icon: Shield, label: "HACCP", color: "teal" },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                className="flex flex-col items-center gap-3 p-4"
-              >
-                <div className={`w-12 h-12 rounded-xl ${colorClasses[item.color].bg} ${colorClasses[item.color].border} border flex items-center justify-center`}>
-                  <item.icon className={`w-6 h-6 ${colorClasses[item.color].text}`} />
-                </div>
-                <span className="text-sm text-white/60 text-center">{item.label}</span>
-              </motion.div>
-            ))}
-          </div>
+      {/* Pain Points */}
+      <section className="py-24 px-6 border-y border-white/5">
+        <div className="max-w-5xl mx-auto text-center">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-2xl md:text-3xl text-white/60 leading-relaxed"
+          >
+            Vous jonglez entre <span className="text-red-400">Excel pour le planning</span>, <span className="text-red-400">un cahier pour les températures</span>, <span className="text-red-400">WhatsApp pour les échanges de shift</span>, et <span className="text-red-400">une calculette pour le CA</span> ?
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-3xl md:text-4xl font-bold mt-8"
+          >
+            C&apos;est fini.
+          </motion.p>
         </div>
       </section>
 
-      {/* All Features with Screenshots */}
-      <section id="fonctionnalites" className="py-32 px-6">
+      {/* ═══════════════════════════════════════════════════════════════ */}
+      {/* COMMANDES */}
+      {/* ═══════════════════════════════════════════════════════════════ */}
+      <section id="commandes" className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="mb-16"
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              Toutes les fonctionnalités
-            </h2>
-            <p className="text-xl text-white/50 max-w-2xl mx-auto">
-              Une solution complète pensée pour la restauration. Chaque fonctionnalité répond à un besoin réel.
-            </p>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-xl bg-green-500/10 border border-green-500/30 flex items-center justify-center">
+                <ShoppingBag className="w-6 h-6 text-green-400" />
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold">Commandes</h2>
+            </div>
+            <p className="text-xl text-white/50">Temps réel. Multi-canaux. Zéro commande perdue.</p>
           </motion.div>
 
-          <div className="space-y-32">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              const colors = colorClasses[feature.color];
-              const isEven = index % 2 === 0;
-
-              return (
-                <motion.div
-                  key={feature.id}
-                  id={feature.id}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  className={`grid md:grid-cols-2 gap-12 items-center ${!isEven ? "md:grid-flow-dense" : ""}`}
-                >
-                  {/* Content */}
-                  <div className={!isEven ? "md:col-start-2" : ""}>
-                    <div className={`inline-flex items-center gap-2 px-4 py-2 ${colors.bg} rounded-full ${colors.border} border mb-6`}>
-                      <Icon className={`w-4 h-4 ${colors.text}`} />
-                      <span className={`text-sm ${colors.text}`}>{feature.subtitle}</span>
-                    </div>
-
-                    <h3 className="text-3xl md:text-4xl font-bold mb-4">{feature.title}</h3>
-                    <p className="text-lg text-white/60 mb-8">{feature.description}</p>
-
-                    <ul className="space-y-3">
-                      {feature.points.map((point, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <div className={`w-5 h-5 rounded-full ${colors.bg} flex items-center justify-center mt-0.5 flex-shrink-0`}>
-                            <Check className={`w-3 h-3 ${colors.text}`} />
-                          </div>
-                          <span className="text-white/70">{point}</span>
-                        </li>
-                      ))}
-                    </ul>
+          {/* Bento Grid */}
+          <div className="grid grid-cols-12 gap-4">
+            {/* Main - Types de commandes */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="col-span-12 md:col-span-8 bg-gradient-to-br from-green-500/10 to-green-500/5 rounded-3xl p-8 border border-green-500/20"
+            >
+              <h3 className="text-2xl font-bold mb-6">3 modes de commande unifiés</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div>
+                  <div className="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center mb-3">
+                    <Utensils className="w-5 h-5 text-green-400" />
                   </div>
-
-                  {/* Screenshot */}
-                  <div className={!isEven ? "md:col-start-1 md:row-start-1" : ""}>
-                    {feature.screenshot ? (
-                      <motion.div
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ duration: 0.3 }}
-                        className={`relative rounded-2xl overflow-hidden border ${colors.border} bg-gradient-to-br ${colors.gradient} to-transparent p-1`}
-                      >
-                        <div className="rounded-xl overflow-hidden bg-[#0a0a0a]">
-                          <Image
-                            src={feature.screenshot}
-                            alt={feature.title}
-                            width={800}
-                            height={500}
-                            className="w-full"
-                          />
-                        </div>
-                      </motion.div>
-                    ) : (
-                      <div className={`relative rounded-2xl overflow-hidden border ${colors.border} bg-gradient-to-br ${colors.gradient} to-transparent p-8 min-h-[300px] flex items-center justify-center`}>
-                        <div className="text-center">
-                          <div className={`w-20 h-20 mx-auto mb-4 rounded-2xl ${colors.bg} flex items-center justify-center`}>
-                            <Icon className={`w-10 h-10 ${colors.text}`} />
-                          </div>
-                          <p className="text-white/40">Interface personnalisée selon votre restaurant</p>
-                        </div>
-                      </div>
-                    )}
+                  <p className="font-medium">Sur place immédiat</p>
+                  <p className="text-sm text-white/40 mt-1">Le client s&apos;installe et commande depuis sa table</p>
+                </div>
+                <div>
+                  <div className="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center mb-3">
+                    <Package className="w-5 h-5 text-amber-400" />
                   </div>
-                </motion.div>
-              );
-            })}
+                  <p className="font-medium">À emporter</p>
+                  <p className="text-sm text-white/40 mt-1">Commande en ligne, récupération au comptoir</p>
+                </div>
+                <div>
+                  <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center mb-3">
+                    <CalendarClock className="w-5 h-5 text-blue-400" />
+                  </div>
+                  <p className="font-medium">Pré-commande</p>
+                  <p className="text-sm text-white/40 mt-1">Réservation + commande à l&apos;avance</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Socket.IO */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="col-span-12 md:col-span-4 bg-white/[0.03] rounded-3xl p-8 border border-white/10"
+            >
+              <Wifi className="w-10 h-10 text-green-400 mb-4" />
+              <h3 className="text-xl font-bold mb-2">Socket.IO</h3>
+              <p className="text-white/50 text-sm">
+                Notification instantanée. Le client voit son statut en temps réel. Vous ne manquez jamais une commande.
+              </p>
+            </motion.div>
+
+            {/* Workflow */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="col-span-12 md:col-span-6 bg-white/[0.03] rounded-3xl p-8 border border-white/10"
+            >
+              <h3 className="text-xl font-bold mb-4">Workflow automatisé</h3>
+              <div className="flex items-center gap-2 text-sm flex-wrap">
+                <span className="px-3 py-1.5 rounded-full bg-yellow-500/20 text-yellow-400">EN ATTENTE</span>
+                <ArrowRight className="w-4 h-4 text-white/30" />
+                <span className="px-3 py-1.5 rounded-full bg-blue-500/20 text-blue-400">ACCEPTÉE</span>
+                <ArrowRight className="w-4 h-4 text-white/30" />
+                <span className="px-3 py-1.5 rounded-full bg-orange-500/20 text-orange-400">EN PRÉPA</span>
+                <ArrowRight className="w-4 h-4 text-white/30" />
+                <span className="px-3 py-1.5 rounded-full bg-purple-500/20 text-purple-400">PRÊTE</span>
+                <ArrowRight className="w-4 h-4 text-white/30" />
+                <span className="px-3 py-1.5 rounded-full bg-green-500/20 text-green-400">TERMINÉE</span>
+              </div>
+              <p className="text-white/40 text-sm mt-4">Changement de statut en un clic. Le client est notifié automatiquement.</p>
+            </motion.div>
+
+            {/* Features */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="col-span-12 md:col-span-6 bg-white/[0.03] rounded-3xl p-8 border border-white/10"
+            >
+              <h3 className="text-xl font-bold mb-4">Inclus</h3>
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                {[
+                  "Variantes produits",
+                  "Personnalisation (extras)",
+                  "Allergènes affichés",
+                  "Commande invité (sans compte)",
+                  "Impression ticket auto",
+                  "Délai de préparation",
+                  "Historique complet",
+                  "Recherche par n° commande",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
+                    <span className="text-white/70">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Screenshot */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="col-span-12 rounded-2xl overflow-hidden border border-white/10"
+            >
+              <Image src="/screenshots/01-sidebar.png" alt="Commandes" width={1200} height={600} className="w-full" />
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Screenshots Gallery */}
-      <section id="screenshots" className="py-32 px-6 bg-gradient-to-b from-white/[0.02] to-transparent">
+      {/* ═══════════════════════════════════════════════════════════════ */}
+      {/* RÉSERVATIONS */}
+      {/* ═══════════════════════════════════════════════════════════════ */}
+      <section className="py-32 px-6 bg-gradient-to-b from-blue-500/5 to-transparent">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center">
+                <CalendarDays className="w-6 h-6 text-blue-400" />
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold">Réservations</h2>
+            </div>
+            <p className="text-xl text-white/50">Plan de salle interactif. Occupation en temps réel.</p>
+          </motion.div>
+
+          <div className="grid grid-cols-12 gap-4">
+            {/* Screenshot principal */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="col-span-12 md:col-span-7 rounded-2xl overflow-hidden border border-blue-500/20"
+            >
+              <Image src="/screenshots/02-reservations.png" alt="Réservations" width={800} height={600} className="w-full" />
+            </motion.div>
+
+            {/* Features */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="col-span-12 md:col-span-5 space-y-4"
+            >
+              <div className="bg-white/[0.03] rounded-3xl p-6 border border-white/10">
+                <MapPin className="w-8 h-8 text-blue-400 mb-3" />
+                <h3 className="font-bold mb-2">Plan de salle visuel</h3>
+                <p className="text-sm text-white/50">Voyez en un coup d&apos;œil quelles tables sont libres, réservées ou occupées. Organisation par zones.</p>
+              </div>
+              <div className="bg-white/[0.03] rounded-3xl p-6 border border-white/10">
+                <Timer className="w-8 h-8 text-blue-400 mb-3" />
+                <h3 className="font-bold mb-2">Libération automatique</h3>
+                <p className="text-sm text-white/50">Durée configurable par réservation. La table se libère automatiquement après le temps imparti.</p>
+              </div>
+              <div className="bg-white/[0.03] rounded-3xl p-6 border border-white/10">
+                <UserCheck className="w-8 h-8 text-blue-400 mb-3" />
+                <h3 className="font-bold mb-2">Workflow complet</h3>
+                <p className="text-sm text-white/50">En attente → Confirmée → Installée → Terminée. Suivi des no-shows.</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════ */}
+      {/* PLANNING & RH */}
+      {/* ═══════════════════════════════════════════════════════════════ */}
+      <section id="planning" className="py-32 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center">
+                <Users className="w-6 h-6 text-purple-400" />
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold">Planning & RH</h2>
+            </div>
+            <p className="text-xl text-white/50">Fini Excel. Fini les SMS. Fini le chaos.</p>
+          </motion.div>
+
+          <div className="grid grid-cols-12 gap-4">
+            {/* Planning */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="col-span-12 md:col-span-8 bg-gradient-to-br from-purple-500/10 to-purple-500/5 rounded-3xl p-8 border border-purple-500/20"
+            >
+              <h3 className="text-2xl font-bold mb-6">Planning hebdomadaire</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                    <CalendarDays className="w-5 h-5 text-purple-400" />
+                  </div>
+                  <div>
+                    <p className="font-medium">Vue semaine/mois</p>
+                    <p className="text-sm text-white/40">Assignez les shifts par poste. Dupliquez une semaine vers une autre en un clic.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                    <AlertTriangle className="w-5 h-5 text-yellow-400" />
+                  </div>
+                  <div>
+                    <p className="font-medium">Détection de conflits</p>
+                    <p className="text-sm text-white/40">Impossible de planifier quelqu&apos;un qui est en congé. Le système vous alerte.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                    <Send className="w-5 h-5 text-purple-400" />
+                  </div>
+                  <div>
+                    <p className="font-medium">Publication</p>
+                    <p className="text-sm text-white/40">Publiez le planning quand il est prêt. Les employés sont notifiés et voient leurs horaires.</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Shift Swap */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="col-span-12 md:col-span-4 bg-white/[0.03] rounded-3xl p-8 border border-white/10"
+            >
+              <RotateCcw className="w-10 h-10 text-orange-400 mb-4" />
+              <h3 className="text-xl font-bold mb-2">Échanges de shift</h3>
+              <p className="text-white/50 text-sm mb-4">
+                Un employé veut échanger ? Il fait sa demande dans l&apos;app. Un collègue accepte. Vous validez. Terminé.
+              </p>
+              <p className="text-xs text-white/30">Fini WhatsApp pour les échanges.</p>
+            </motion.div>
+
+            {/* Pointage */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="col-span-12 md:col-span-6 bg-gradient-to-br from-orange-500/10 to-orange-500/5 rounded-3xl p-8 border border-orange-500/20"
+            >
+              <Clock className="w-10 h-10 text-orange-400 mb-4" />
+              <h3 className="text-2xl font-bold mb-2">Pointage par PIN</h3>
+              <p className="text-white/50 mb-4">
+                Chaque employé a un code PIN. Il pointe son arrivée, ses pauses, son départ. Mode kiosk parfait pour une tablette au comptoir.
+              </p>
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                {["Arrivée/Départ", "Pauses trackées", "Alertes retard", "Export pour la paie"].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-orange-400" />
+                    <span className="text-white/70">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Comparaison */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="col-span-12 md:col-span-6 bg-white/[0.03] rounded-3xl p-8 border border-white/10"
+            >
+              <TrendingUp className="w-10 h-10 text-pink-400 mb-4" />
+              <h3 className="text-2xl font-bold mb-2">Planifié vs Réalisé</h3>
+              <p className="text-white/50 mb-4">
+                Comparez les heures prévues aux heures pointées. Score de ponctualité par employé. Identifiez les retards récurrents.
+              </p>
+              <p className="text-sm text-white/30">Fiche RH complète avec documents, historique des absences, congés.</p>
+            </motion.div>
+
+            {/* Screenshots */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="col-span-12 md:col-span-6 rounded-2xl overflow-hidden border border-white/10"
+            >
+              <Image src="/screenshots/04-clock-in.png" alt="Pointage" width={800} height={500} className="w-full" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="col-span-12 md:col-span-6 rounded-2xl overflow-hidden border border-white/10"
+            >
+              <Image src="/screenshots/03-employee-stats.png" alt="Stats employés" width={800} height={500} className="w-full" />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════ */}
+      {/* HACCP */}
+      {/* ═══════════════════════════════════════════════════════════════ */}
+      <section id="haccp" className="py-32 px-6 bg-gradient-to-b from-teal-500/5 to-transparent">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center">
+                <Shield className="w-6 h-6 text-teal-400" />
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold">HACCP</h2>
+            </div>
+            <p className="text-xl text-white/50">Conformité totale. Zéro papier. Preuves photos.</p>
+          </motion.div>
+
+          <div className="grid grid-cols-12 gap-4">
+            {/* Températures */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="col-span-12 md:col-span-6 lg:col-span-3 bg-gradient-to-br from-cyan-500/10 to-cyan-500/5 rounded-3xl p-6 border border-cyan-500/20"
+            >
+              <Thermometer className="w-10 h-10 text-cyan-400 mb-4" />
+              <h3 className="text-xl font-bold mb-2">Températures</h3>
+              <p className="text-sm text-white/50 mb-3">Relevés frigo/congélo avec photo. Alertes si hors normes. Historique complet.</p>
+              <p className="text-xs text-cyan-400">Configurable par appareil</p>
+            </motion.div>
+
+            {/* DLC */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="col-span-12 md:col-span-6 lg:col-span-3 bg-gradient-to-br from-yellow-500/10 to-yellow-500/5 rounded-3xl p-6 border border-yellow-500/20"
+            >
+              <Package className="w-10 h-10 text-yellow-400 mb-4" />
+              <h3 className="text-xl font-bold mb-2">DLC / Péremption</h3>
+              <p className="text-sm text-white/50 mb-3">Suivi des dates avec photos. Alertes produits expirants. Stats de gaspillage.</p>
+              <p className="text-xs text-yellow-400">Consommé / Jeté tracé</p>
+            </motion.div>
+
+            {/* Huiles */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="col-span-12 md:col-span-6 lg:col-span-3 bg-gradient-to-br from-amber-500/10 to-amber-500/5 rounded-3xl p-6 border border-amber-500/20"
+            >
+              <Droplets className="w-10 h-10 text-amber-400 mb-4" />
+              <h3 className="text-xl font-bold mb-2">Changements d&apos;huile</h3>
+              <p className="text-sm text-white/50 mb-3">Suivi par friteuse avec photos. Historique des changements. Rappels automatiques.</p>
+              <p className="text-xs text-amber-400">Stats par équipement</p>
+            </motion.div>
+
+            {/* Livraisons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="col-span-12 md:col-span-6 lg:col-span-3 bg-gradient-to-br from-slate-500/10 to-slate-500/5 rounded-3xl p-6 border border-slate-500/20"
+            >
+              <Truck className="w-10 h-10 text-slate-400 mb-4" />
+              <h3 className="text-xl font-bold mb-2">Réceptions</h3>
+              <p className="text-sm text-white/50 mb-3">Contrôle à réception avec photos. Non-conformités documentées. Stats fournisseur.</p>
+              <p className="text-xs text-slate-400">Traçabilité complète</p>
+            </motion.div>
+
+            {/* Screenshot */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="col-span-12 md:col-span-6 rounded-2xl overflow-hidden border border-white/10"
+            >
+              <Image src="/screenshots/05-temperature.png" alt="Températures" width={800} height={500} className="w-full" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="col-span-12 md:col-span-6 rounded-2xl overflow-hidden border border-white/10"
+            >
+              <Image src="/screenshots/11-delivery-control.png" alt="Livraisons" width={800} height={500} className="w-full" />
+            </motion.div>
+
+            {/* Export */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="col-span-12 bg-white/[0.03] rounded-3xl p-8 border border-white/10 text-center"
+            >
+              <FileText className="w-12 h-12 text-teal-400 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold mb-2">Export PDF pour contrôles</h3>
+              <p className="text-white/50 max-w-2xl mx-auto">
+                Un inspecteur débarque ? Générez votre dossier HACCP en 2 clics. Toutes les preuves sont là, avec photos et horodatage.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════ */}
+      {/* ANALYTICS */}
+      {/* ═══════════════════════════════════════════════════════════════ */}
+      <section id="analytics" className="py-32 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center">
+                <BarChart3 className="w-6 h-6 text-emerald-400" />
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold">Analytics</h2>
+            </div>
+            <p className="text-xl text-white/50">Décisions data-driven. Pas au feeling.</p>
+          </motion.div>
+
+          <div className="grid grid-cols-12 gap-4">
+            {/* KPIs */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="col-span-12 bg-gradient-to-br from-emerald-500/10 to-emerald-500/5 rounded-3xl p-8 border border-emerald-500/20"
+            >
+              <h3 className="text-2xl font-bold mb-6">Tout ce que vous devez savoir</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {[
+                  { icon: Wallet, label: "CA jour/semaine/mois", color: "emerald" },
+                  { icon: ShoppingBag, label: "Commandes par créneau", color: "blue" },
+                  { icon: ChefHat, label: "Top produits vendus", color: "amber" },
+                  { icon: Users2, label: "Clients fidèles vs nouveaux", color: "pink" },
+                  { icon: TrendingUp, label: "Évolution par période", color: "purple" },
+                  { icon: PieChart, label: "Répartition par type", color: "cyan" },
+                  { icon: Clock, label: "Temps de préparation moyen", color: "orange" },
+                  { icon: HeartHandshake, label: "Taux de fidélisation", color: "red" },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <item.icon className={`w-5 h-5 text-${item.color}-400`} />
+                    <span className="text-sm text-white/70">{item.label}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Screenshot */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="col-span-12 rounded-2xl overflow-hidden border border-emerald-500/20"
+            >
+              <Image src="/screenshots/13-analytics-full.png" alt="Analytics" width={1200} height={600} className="w-full" />
+            </motion.div>
+
+            {/* Heatmap */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="col-span-12 md:col-span-6 bg-white/[0.03] rounded-3xl p-8 border border-white/10"
+            >
+              <h3 className="text-xl font-bold mb-4">Heatmap des commandes</h3>
+              <p className="text-white/50">Visualisez vos pics d&apos;activité par heure et jour de la semaine. Optimisez votre staffing en conséquence.</p>
+            </motion.div>
+
+            {/* Produits */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="col-span-12 md:col-span-6 bg-white/[0.03] rounded-3xl p-8 border border-white/10"
+            >
+              <h3 className="text-xl font-bold mb-4">Analyse produits</h3>
+              <p className="text-white/50">Top ventes, flops, produits souvent achetés ensemble. Identifiez ce qui marche et ce qui doit changer.</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════ */}
+      {/* AUTRES MODULES */}
+      {/* ═══════════════════════════════════════════════════════════════ */}
+      <section className="py-32 px-6 bg-gradient-to-b from-white/[0.02] to-transparent">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -492,117 +738,111 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Aperçu du Dashboard
-            </h2>
-            <p className="text-xl text-white/50">
-              Interface moderne et intuitive, optimisée pour le quotidien en restaurant
-            </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Et aussi...</h2>
+            <p className="text-xl text-white/50">Tout ce qu&apos;il faut pour être complet.</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { src: "/screenshots/13-analytics-full.png", title: "Analytics & CA" },
-              { src: "/screenshots/02-reservations.png", title: "Plan de salle" },
-              { src: "/screenshots/09-products.png", title: "Gestion produits" },
-              { src: "/screenshots/04-clock-in.png", title: "Pointage" },
-              { src: "/screenshots/06-clients.png", title: "Base clients" },
-              { src: "/screenshots/03-employee-stats.png", title: "Stats employés" },
-              { src: "/screenshots/05-temperature.png", title: "HACCP" },
-              { src: "/screenshots/08-notifications.png", title: "Notifications" },
-              { src: "/screenshots/11-delivery-control.png", title: "Livraisons" },
-              { src: "/screenshots/10-team-performance.png", title: "Performance équipe" },
-              { src: "/screenshots/12-promo-codes.png", title: "Codes promo" },
-              { src: "/screenshots/07-analytics.png", title: "Statistiques" },
-            ].map((img, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                className="group relative rounded-xl overflow-hidden border border-white/10 hover:border-amber-500/30 transition-colors"
-              >
-                <Image
-                  src={img.src}
-                  alt={img.title}
-                  width={600}
-                  height={400}
-                  className="w-full transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                  <span className="text-white font-medium">{img.title}</span>
+          <div className="grid grid-cols-12 gap-4">
+            {/* Fidélité */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="col-span-12 md:col-span-4 bg-gradient-to-br from-pink-500/10 to-pink-500/5 rounded-3xl p-6 border border-pink-500/20"
+            >
+              <HeartHandshake className="w-10 h-10 text-pink-400 mb-4" />
+              <h3 className="text-xl font-bold mb-2">Programme fidélité</h3>
+              <p className="text-sm text-white/50">Points par commande, récompenses configurables, taux de conversion paramétrable.</p>
+            </motion.div>
+
+            {/* Promos */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="col-span-12 md:col-span-4 bg-gradient-to-br from-violet-500/10 to-violet-500/5 rounded-3xl p-6 border border-violet-500/20"
+            >
+              <BadgePercent className="w-10 h-10 text-violet-400 mb-4" />
+              <h3 className="text-xl font-bold mb-2">Codes promo</h3>
+              <p className="text-sm text-white/50">% ou montant fixe, limite d&apos;usage, date d&apos;expiration, restrictions produits. Stats d&apos;utilisation.</p>
+            </motion.div>
+
+            {/* Notifications */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="col-span-12 md:col-span-4 bg-gradient-to-br from-cyan-500/10 to-cyan-500/5 rounded-3xl p-6 border border-cyan-500/20"
+            >
+              <Bell className="w-10 h-10 text-cyan-400 mb-4" />
+              <h3 className="text-xl font-bold mb-2">Broadcast</h3>
+              <p className="text-sm text-white/50">Email, push, in-app. Envoyez des promos à tous vos clients en un clic. Ciblage par segment.</p>
+            </motion.div>
+
+            {/* Produits */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="col-span-12 md:col-span-6 rounded-2xl overflow-hidden border border-white/10"
+            >
+              <Image src="/screenshots/09-products.png" alt="Produits" width={800} height={500} className="w-full" />
+            </motion.div>
+
+            {/* Clients */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="col-span-12 md:col-span-6 rounded-2xl overflow-hidden border border-white/10"
+            >
+              <Image src="/screenshots/06-clients.png" alt="Clients" width={800} height={500} className="w-full" />
+            </motion.div>
+
+            {/* BimiPrint */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="col-span-12 bg-gradient-to-br from-purple-500/10 to-purple-500/5 rounded-3xl p-8 border border-purple-500/20"
+            >
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-1">
+                  <Printer className="w-12 h-12 text-purple-400 mb-4" />
+                  <h3 className="text-2xl font-bold mb-2">BimiPrint</h3>
+                  <p className="text-white/50 mb-4">
+                    Imprimante ticket intégrée via Raspberry Pi. Impression automatique des commandes en cuisine. File d&apos;attente en temps réel.
+                  </p>
+                  <p className="text-sm text-purple-400">WebSocket direct avec vos imprimantes</p>
                 </div>
-              </motion.div>
-            ))}
+                <div className="w-32 h-32 rounded-2xl bg-purple-500/20 flex items-center justify-center">
+                  <Printer className="w-16 h-16 text-purple-400/50" />
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Why BIMI */}
-      <section className="py-32 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Pourquoi choisir BIMI ?
-            </h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Zap,
-                title: "Tout-en-un",
-                description: "Plus besoin de jongler entre 10 outils différents. BIMI centralise tout : commandes, réservations, RH, analytics.",
-              },
-              {
-                icon: Shield,
-                title: "Adapté à la restauration",
-                description: "Conçu par un développeur qui connaît le terrain. Chaque fonctionnalité répond à un besoin réel des restaurateurs.",
-              },
-              {
-                icon: HeartHandshake,
-                title: "Support dédié",
-                description: "Accompagnement personnalisé pour la mise en place. Formation de votre équipe et support réactif.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="p-8 rounded-2xl bg-white/[0.03] border border-white/10"
-              >
-                <div className="w-14 h-14 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-6">
-                  <item.icon className="w-7 h-7 text-amber-400" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                <p className="text-white/60">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
+      {/* ═══════════════════════════════════════════════════════════════ */}
+      {/* STATS */}
+      {/* ═══════════════════════════════════════════════════════════════ */}
       <section className="py-20 px-6 border-y border-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-white/40 text-sm uppercase tracking-wider mb-2">Résultats avec BIMI SUSHI</p>
-            <p className="text-white/60">Premier restaurant équipé de BIMI</p>
+            <p className="text-white/40 text-sm uppercase tracking-wider">En production avec BIMI SUSHI</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: "51 484€", label: "Chiffre d'affaires" },
-              { value: "1 673", label: "Commandes traitées" },
-              { value: "434+", label: "Clients fidélisés" },
-              { value: "44%", label: "Taux de fidélité" },
+              { value: "51 484€", label: "de CA traité" },
+              { value: "1 673", label: "commandes" },
+              { value: "434+", label: "clients" },
+              { value: "33", label: "modules" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -622,58 +862,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section id="tarifs" className="py-32 px-6">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Tarification simple
-            </h2>
-            <p className="text-xl text-white/50">
-              Un tarif unique, toutes les fonctionnalités incluses
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="p-8 md:p-12 rounded-3xl bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-transparent border border-amber-500/20"
-          >
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-              <div>
-                <p className="text-amber-400 font-medium mb-2">Licence BIMI</p>
-                <p className="text-4xl md:text-5xl font-bold mb-4">Sur devis</p>
-                <p className="text-white/60">Adapté à la taille de votre établissement</p>
-              </div>
-              <div className="flex-1 max-w-md">
-                <ul className="space-y-3">
-                  {[
-                    "Site client personnalisé",
-                    "Dashboard admin complet",
-                    "Formation de l'équipe",
-                    "Support prioritaire",
-                    "Mises à jour incluses",
-                    "Hébergement inclus",
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3">
-                      <Check className="w-5 h-5 text-green-400" />
-                      <span className="text-white/80">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
+      {/* ═══════════════════════════════════════════════════════════════ */}
       {/* CTA */}
+      {/* ═══════════════════════════════════════════════════════════════ */}
       <section id="contact" className="py-32 px-6">
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -685,13 +876,12 @@ export default function Home() {
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20" />
             <div className="relative z-10">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Prêt à moderniser
+                Votre restaurant mérite
                 <br />
-                votre restaurant ?
+                <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">mieux qu&apos;Excel.</span>
               </h2>
               <p className="text-xl text-white/60 mb-8 max-w-xl mx-auto">
-                Demandez une démo gratuite et découvrez comment BIMI
-                peut transformer votre gestion quotidienne.
+                Demandez une démo. Je vous montre tout en 30 minutes.
               </p>
               <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
                 <input
@@ -707,7 +897,7 @@ export default function Home() {
                 </button>
               </form>
               <p className="text-white/40 text-sm mt-6">
-                Ou contactez-moi directement : <a href="mailto:Mirakiramal@gmail.com" className="text-amber-400 hover:underline">Mirakiramal@gmail.com</a>
+                <a href="mailto:Mirakiramal@gmail.com" className="text-amber-400 hover:underline">Mirakiramal@gmail.com</a>
               </p>
             </div>
           </motion.div>
